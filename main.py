@@ -51,7 +51,7 @@ def kill_app():
     while True:
         mem = memory()
         proc = get_proc_list()
-        if mem['proc_usage'] >= 70.0:
+        if mem['proc_usage'] >= 90.0:
             print(proc.to_str())
             os.kill(proc.pid, signal.SIGTERM)
             print(memory()['used'])
